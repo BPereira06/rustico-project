@@ -1,0 +1,432 @@
+:root{
+    --brown: #473C38;
+    --beige: #C2B19C;
+    --light-gray10: #F0F1F0;
+    --gold: #B2935B;
+    --border: 5px;
+    --scale-btn: 0.95;
+    --transition-btn: 0.3s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+html{
+    scroll-behavior: smooth;/*Faz com que a navegação em âncora seja suave*/
+}
+
+body{
+    background-color: #fff;
+    margin:0
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+img{
+    display: block;
+}
+.btn{
+    border-radius: var(--border);
+    background: var(--brown);
+    display: inline-block;
+    color: var(--light-gray10);
+    text-decoration: none;
+    line-height: 24px;
+    font-family: Roboto, sans-serif;
+    border: 0;
+    transition: var(--transition-btn);
+}
+
+.btn:hover{
+    scale: var(--scale-btn);
+}
+
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    width: calc(100% - 30px);
+}
+
+.header{
+    padding: 10px 0;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.menu a{
+    color: var(--brown);
+    padding-left: 66px;
+    text-decoration: underline;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 16px;
+    
+}
+
+
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    background-color: var(--brown);
+    height: calc(100vh - 100px);
+    text-align: left;
+    animation: fadeIn 2s;
+
+}
+
+.hero-section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-section .text h1{
+    color: #fff;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.hero-section .text p{
+    color: #FFF;
+    font-family: Roboto, sans-serif;
+    line-height: 130%;
+    max-width: 461px;
+    margin-bottom: 10px;
+    
+}
+
+.hero-section .text a{
+    display: inline-block;
+    background-color: var(--beige);
+    padding: 15px 51px;
+    text-decoration: none;
+    color: var(--brown);
+    border-radius: var(--border);
+    font-family: "Playfair Display", sans-serif;
+    transition: var(--transition-btn);
+}
+
+.hero-section .text a:hover{
+    scale: var(--scale-btn);
+}
+
+.second-section {       
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 102px;
+}
+
+.second-section .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.second-section .text h2{
+    color: var(--brown);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    max-width: 653px;
+}
+
+.second-section p{
+    font-family: Roboto, sans-serif;
+    line-height: 130%;
+    max-width: 654px;
+    color: #666;
+    margin: 25px 0;
+}
+
+.second-section a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: var(--brown);
+    border-radius: var(--border);
+    color: var(--light-gray10);
+    font-family: Roboto, sans-serif;
+}
+
+.card-section{
+    padding: 50px;
+    background-color: var(--light-gray10);
+}
+
+.card-section .main-title{
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
+    color: var(--brown);
+    margin-bottom: 50px;
+}
+
+.card-section .main-title h2{
+    font-weight: 400;
+    font-size: 48px;
+}
+.card-section .all-cards{
+    display: flex;
+    gap: 24px;
+}
+
+.card-section .all-cards .card{
+    background-color: #FAFAFA ;
+    border-radius: var(--border);
+    padding: 38px;
+    padding-bottom: 32px;
+}
+
+.card-section .card h3{
+    color: #473C38;
+    font-family: "Playfair Display";
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 17px;
+}
+
+.card-section .card p{
+    color: #666;
+    font-family: Roboto;
+    line-height: 130%;
+    margin: 17px 0;
+}
+
+.card-section .card .btn{
+    width: 100%;
+    line-height: 24px;
+    display: inline-block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card-section .icon img{
+    border-radius: var(--border);
+}
+
+.phrase-section{
+    display: flex;
+    padding: 49px 0;
+    align-items: center;
+    flex-direction: column;
+}
+
+.phrase-section h2{
+    color: var(--brown);
+    font-family: "Playfair Display", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.phrase-section p{
+    color: #666;
+    font-family: Roboto, sans-serif;
+    
+}
+
+.forms{
+    background-color: var(--beige);
+    padding: 63px;
+}
+
+.forms .container form{
+    display: flex;
+    justify-content: space-between;
+}
+
+.forms ::placeholder{
+    color: #666;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+}
+
+.forms .container form input{
+    background-color: #F0F1F0;
+    max-width: 461px;
+    width: 100%;
+    padding-left: 12px;
+    border: transparent;
+    color: var(--brown);
+    font-family: Roboto,sans-serif;
+    font-size: 16px;
+}
+
+.forms .container form button{
+    max-width: 170px;
+}
+
+.footer{
+    background-color: var(--brown);
+    padding: 50px 150px;
+}
+
+.footer .container{
+    display: flex;
+    gap: 24px;
+    
+}
+
+.footer .container h3{
+    color: #FFF;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.footer .container p{
+    margin:0;
+    margin-top: 11px;
+    font-family: Roboto, sans-serif;
+    line-height: 130%;
+    color: var(--light-gray10);
+}
+
+@media (max-width: 1100px){
+
+    .hero-section .text a:active{
+        background-color: var(--light-gray10);
+    }
+
+    .btn:active{
+        background-color: var(--light-gray10);
+    }
+
+    .menu{
+        transform: translateX(-100%);
+        background-color: var(--gold);
+        position: absolute;
+        left: 0;
+        top: 100px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 100px);
+        transition: 0.5s;
+    }
+
+    .menu-aberto{
+        transform: translateX(0);
+    }
+    .menu a{
+        padding: 20px 10px;
+        border-bottom: 1px solid var(--brown);
+        text-decoration: none;
+    }
+
+    .menu a:active{
+        background-color: var(--beige)
+    }
+
+    .bar{
+        width: 40px;
+        height: 3px;
+        background-color: var(--brown);
+        margin-bottom: 3px;
+        transition: 0.3s;
+    }
+
+    .x .bar:first-child{
+        transform: rotate(45deg) translate(5px, 5px);
+
+    }
+
+    .x .bar:nth-child(2){
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+
+     /*Quando o .bar for o último filho*/
+    .x .bar:last-child{
+        transform: rotate(-45deg) translate(4px, -3px);
+    }
+
+    .hero-section{
+        height: auto;
+        padding: 50px 0;
+    }
+    .hero-section .text h1{
+        font-size: 32px;
+    }
+
+    .hero-section .text p{
+        max-width: 100%;
+    }
+
+    .hero-section .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-section img{
+        margin-top: 50px;
+    }
+
+    .second-section img{
+        display: none;
+    }
+
+    .card-section .all-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        max-width: 356px;
+        align-items: center;
+    }
+
+    .card img{
+        width: 100%;
+    }
+
+    .phrase-section{
+        text-align: center;
+    }
+
+    .forms .container form{
+        display: flex;
+        flex-direction: column;
+        row-gap: 13px;
+    }
+
+    .forms .container form input{
+        max-width: 100%;
+        height: 30px;
+    }
+
+    .forms .container form input::placeholder{
+        color: var(--brown);
+        font-size: 16px;
+    }
+
+    .footer .container{
+        flex-direction: column;
+
+    }
+    
+}
+
